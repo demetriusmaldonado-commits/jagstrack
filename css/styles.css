@@ -3,27 +3,47 @@
 
 
 :root {
-   /* Primary Brand Colors */
-   --jag-black: #000000;           /* Jefferson Academy Blue */
-   --jag-gold: #f0ad4e;           /* Jefferson Academy Gold */
-   --jag-accent: #f0ad4e;         /* Success/Accent Green */
-  
-   /* Text Colors */
-   --text-dark: #333333;
-   --text-light: #ffffff;
-   --text-muted: #6c757d;
-  
-   /* Background Colors */
-   --background-light: #f8f9fa;
-   --background-white: #ffffff;
-   --background-dark: #343a40;
-  
-   /* Semantic Colors for Assignments */
-   --success-color: #28a745;      /* Completed assignments */
-   --warning-color: #ffc107;      /* Due soon */
-   --danger-color: #dc3545;       /* Overdue */
-   --info-color: #17a2b8;         /* General info */
+ /* Primary Brand Colors */
+ --jag-black: #000000;
+ --jag-gold: #f0ad4e;
+ --jag-accent: #ffffff;
+
+
+ /* Text Colors */
+ --text-dark: #000000;
+ --text-light: #ffffff;
+ --text-muted: #c0bebe;
+
+
+ /* Background Colors */
+ --background-light: #ebeaea;
+ --background-white: #ffffff;
+ --background-dark: #000000;
 }
+
+
+/* ===== CSS VARIABLES FOR DARK MODE ===== */
+
+
+[data-theme="dark"] {
+ /* Primary Brand Colors */
+ --jag-black: #000000;
+ --jag-gold: #ff9500;
+ --jag-accent: #f1a130;
+
+
+ /* Text Colors */
+ --text-dark: #ff9500;
+ --text-light: #f1f1f1;
+ --text-muted: #c9c8c8;
+
+
+ /* Background Colors */
+ --background-light: #000000;
+ --background-white: #ffffff;
+ --background-dark: #202020;
+}
+
 
 
 /* ===== BODY & GENERAL STYLES ===== */
@@ -97,7 +117,7 @@ body {
 
 
 .class-card p {
-   color: var(--jag-accent);
+   color: var(--jag-black);
    margin-bottom: 0;
 }
 
@@ -167,4 +187,97 @@ footer ul {
 footer ul li {
    list-style: none;
    margin-bottom: 8px;
+}
+
+/* ===== GOOGLE CALENDAR STYLES ===== */
+
+
+.calendar-container {
+ position: relative;
+ padding-bottom: 75%;
+ height: 0;
+ overflow: hidden;
+ margin: 20px 0;
+ border: 2px solid var(--jag-accent);
+ border-radius: 8px;
+ background-color: var(--background-white);
+}
+
+
+.google-calendar-responsive {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border: 0;
+}
+
+
+@media (min-width: 768px) {
+ .calendar-container {
+   padding-bottom: 56.25%;
+ }
+}
+
+
+
+/* ===== NAVBAR STYLES ===== */
+
+
+.navbar {
+ background: linear-gradient(135deg, var(--jag-black) 0%, #222222 100%);
+ padding: 0.5rem 1rem;
+}
+
+
+.navbar-brand {
+ font-size: 1.5rem;
+ font-weight: bold;
+ color: var(--jag-gold) !important;
+}
+
+
+.navbar-brand img {
+ margin-right: 10px;
+}
+
+
+.nav-link {
+ color: var(--text-light) !important;
+ font-weight: 500;
+ margin: 0 10px;
+ transition: color 0.3s ease;
+}
+
+
+.nav-link:hover {
+ color: var(--jag-gold) !important;
+}
+
+
+.navbar-toggler {
+ border-color: var(--jag-gold);
+}
+
+
+body {
+ padding-top: 56px;
+}
+
+
+.jumbotron {
+ margin-top: 0;
+}
+.center{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.goals{
+   color: var(--jag-black) !important;
+}
+.progress-bar-custom-color{
+   color: var(--jag-gold) !important;
 }
