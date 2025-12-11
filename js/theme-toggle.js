@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
        } else {
            // Switch to dark mode
            document.documentElement.setAttribute('data-theme', 'dark');
-           themeIcon.textContent = '🌙';
+           themeIcon.textContent = '🐆';
            localStorage.setItem('theme', 'dark');
        }
    });
